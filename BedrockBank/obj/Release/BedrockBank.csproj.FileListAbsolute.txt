@@ -1,0 +1,5 @@
+C:\Users\sachip\Documents\Visual Studio 2013\Projects\BedrockBank\BedrockBank\bin\Release\BedrockBank.exe.config
+C:\Users\sachip\Documents\Visual Studio 2013\Projects\BedrockBank\BedrockBank\bin\Release\BedrockBank.exe
+C:\Users\sachip\Documents\Visual Studio 2013\Projects\BedrockBank\BedrockBank\bin\Release\BedrockBank.pdb
+C:\Users\sachip\Documents\Visual Studio 2013\Projects\BedrockBank\BedrockBank\obj\Release\BedrockBank.exe
+C:\Users\sachip\Documents\Visual Studio 2013\Projects\BedrockBank\BedrockBank\obj\Release\BedrockBank.pdb
