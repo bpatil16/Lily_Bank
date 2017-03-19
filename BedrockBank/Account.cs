@@ -8,11 +8,16 @@ namespace BedrockBank
 {
     class Account
     {
+        #region static Vaiables
+        private static int lastAccountNumber = 0;
+        #endregion
+
         #region Properties
         /// <summary>
         /// Account number
         /// </summary>
-        public int AccountNumber { get; }
+        public int AccountNumber { get; private set; }
+
 
         public string EmailAddress { get; set; }
 
@@ -21,7 +26,13 @@ namespace BedrockBank
         public string TypeOfAccount { get; set; }
 
         #endregion
-
+        
+        #region Constructor
+        public Account()
+        {
+            AccountNumber = ++lastAccountNumber;
+        }
+        #endregion
         #region Methods
 
         public void Deposit(decimal amount)

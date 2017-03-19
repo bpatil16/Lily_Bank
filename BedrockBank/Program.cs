@@ -10,11 +10,44 @@ namespace BedrockBank
     {
         static void Main(string[] args)
         {
-            var account1 = new Account();
-            account1.EmailAddress = "test@test.com";
-            account1.TypeOfAccount = "Checking";
-            account1.Deposit(100.40M);
-            Console.WriteLine($"AccountNumber: {account1.AccountNumber}, TypeOfAccount: {account1.TypeOfAccount}, Balance: {account1.Balance}");
+
+            Console.WriteLine("******************* Welcome to BedRock Bank! ******************");
+            Console.WriteLine("Please select from the following options");
+            Console.WriteLine("0. Exit");
+            Console.WriteLine("1. Create an Account");
+            Console.WriteLine("2. Deposit");
+            Console.WriteLine("3. Withdraw");
+
+            var option = Console.ReadLine();
+
+            switch (option)
+            {
+                case "0":
+                    Console.WriteLine("\n Thank you!");
+                    break;
+                case "1":
+                    var account1 = new Account();
+
+                    Console.Write("\nPlease provide email address: ");
+                    var emailAddress = Console.ReadLine();
+                    account1.EmailAddress = emailAddress;
+
+                    Console.Write("\n What Type of Account: ");
+                    var typeOfAccount = Console.ReadLine();
+                    account1.TypeOfAccount = typeOfAccount;
+
+                    //account1.Deposit(100.40M);
+
+                    Console.WriteLine($"AccountNumber: {account1.AccountNumber}, TypeOfAccount: {account1.TypeOfAccount}, Balance: {account1.Balance}");
+
+
+                    break;
+                case "2":
+                                     break;
+                default:
+                    break;
+            }
+                      
             Console.ReadLine();
 
         }

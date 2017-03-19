@@ -6,3 +6,6 @@ C:\Users\sachip\Documents\Visual Studio 2013\Projects\BedrockBank\BedrockBank\ob
 C:\Users\sachip\Documents\Github\Lily_Bank\BedrockBank\bin\Debug\BedrockBank.exe.config
 C:\Users\sachip\Documents\Github\Lily_Bank\BedrockBank\obj\Debug\BedrockBank.exe
 C:\Users\sachip\Documents\Github\Lily_Bank\BedrockBank\obj\Debug\BedrockBank.pdb
+C:\Users\sachip\Documents\Github\Lily_Bank\BedrockBank\bin\Debug\BedrockBank.exe
+C:\Users\sachip\Documents\Github\Lily_Bank\BedrockBank\bin\Debug\BedrockBank.pdb
+C:\Users\sachip\Documents\Github\Lily_Bank\BedrockBank\obj\Debug\BedrockBank.csprojResolveAssemblyReference.cache
