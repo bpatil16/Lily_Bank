@@ -26,19 +26,13 @@ namespace BedrockBank
                     Console.WriteLine("\n Thank you!");
                     break;
                 case "1":
-                    var account1 = new Account();
-
                     Console.Write("\nPlease provide email address: ");
                     var emailAddress = Console.ReadLine();
-                    account1.EmailAddress = emailAddress;
-
                     Console.Write("\n What Type of Account: ");
                     var typeOfAccount = Console.ReadLine();
-                    account1.TypeOfAccount = typeOfAccount;
+                    var account1 = Bank.CreateAccount(emailAddress, AccountTypes.Checking, 0.0M);
 
-                    //account1.Deposit(100.40M);
-
-                    Console.WriteLine($"AccountNumber: {account1.AccountNumber}, TypeOfAccount: {account1.TypeOfAccount}, Balance: {account1.Balance}");
+                   Console.WriteLine($"AccountNumber: {account1.AccountNumber}, TypeOfAccount: {account1.TypeOfAccount}, Balance: {account1.Balance}");
 
 
                     break;
