@@ -37,7 +37,7 @@ namespace BedrockBank
 
                     break;
                 case "2":
-                                     break;
+                    break;
                 default:
                     break;
             }

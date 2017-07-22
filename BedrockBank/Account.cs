@@ -9,12 +9,15 @@ namespace BedrockBank
     enum AccountTypes
      {
         Checking,
-        Savings
+        Savings,
+        Loan,
+        CD
      }
 
         class Account
     {
         #region static Variables
+
         private static int lastAccountNumber = 0;
         #endregion
 
@@ -22,13 +25,14 @@ namespace BedrockBank
         /// <summary>
         /// Account number
         /// </summary>
-        public int AccountNumber { get; private set; }
+        public int AccountNumber { get; private set; } 
 
-
+        public DateTime CreatedDate { get; private set; }
         public string EmailAddress { get; set; }
 
         public decimal Balance { get; private set; }
 
+        
         public AccountTypes TypeOfAccount { get; set; }
 
         #endregion
@@ -37,6 +41,7 @@ namespace BedrockBank
         public Account()
         {
             AccountNumber = ++lastAccountNumber;
+            CreatedDate = DateTime.Now;
         }
 
         //public Account(string typeOfAccount) : this()
