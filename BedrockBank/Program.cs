@@ -31,8 +31,7 @@ namespace BedrockBank
                     Console.Write("\n What Type of Account: ");
                     var typeOfAccount = Console.ReadLine();
                     var account1 = Bank.CreateAccount(emailAddress, AccountTypes.Checking, 0.0M);
-
-                   Console.WriteLine($"AccountNumber: {account1.AccountNumber}, TypeOfAccount: {account1.TypeOfAccount}, Balance: {account1.Balance}");
+                    Console.WriteLine($"AccountNumber: {account1.AccountNumber}, TypeOfAccount: {account1.TypeOfAccount}, Balance: {account1.Balance}");
 
 
                     break;

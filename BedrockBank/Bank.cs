@@ -6,16 +6,21 @@ using System.Threading.Tasks;
 
 namespace BedrockBank
 {
-    static class Bank
+    public static class Bank
     {
-        public static Account CreateAccount(string emailAddress, AccountTypes typeOfAccount, decimal amount)
+
+        
+        public static Account CreateAccount(string emailAddress, AccountTypes typeOfAccount, decimal amount = 0.0M)
         {
             var account = new Account
             {
                 EmailAddress = emailAddress,
                 TypeOfAccount = typeOfAccount
             };
-            account.Deposit(amount);
+            if (amount > 0)
+            {
+                account.Deposit(amount);
+            }
             return account;
         }
     }

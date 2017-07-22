@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BedrockBank
 {
-    enum AccountTypes
+    public enum AccountTypes
      {
         Checking,
         Savings,
@@ -14,7 +14,7 @@ namespace BedrockBank
         CD
      }
 
-        class Account
+    public class Account
     {
         #region static Variables
 
@@ -38,21 +38,14 @@ namespace BedrockBank
         #endregion
         
         #region Constructor
+
+
         public Account()
         {
             AccountNumber = ++lastAccountNumber;
             CreatedDate = DateTime.Now;
         }
 
-        //public Account(string typeOfAccount) : this()
-        //{
-        //    TypeOfAccount = typeOfAccount;
-        //}
-
-        //public Account(string emailAddress, string typeOfAccount) : this(typeOfAccount)
-        //{
-        //    EmailAddress = emailAddress;
-        //}
         #endregion
         #region Methods
 
