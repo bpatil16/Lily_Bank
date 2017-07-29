@@ -12,7 +12,7 @@ namespace BedrockBank
         {
 
             Console.WriteLine("******************* Welcome to BedRock Bank! ******************");
-            Console.WriteLine("Please select from the following options");
+            Console.Write("Please select from the following options");
             Console.WriteLine("0. Exit");
             Console.WriteLine("1. Create an Account");
             Console.WriteLine("2. Deposit");
@@ -24,12 +24,21 @@ namespace BedrockBank
             {
                 case "0":
                     Console.WriteLine("\n Thank you!");
-                    break;
+                    return;
                 case "1":
                     Console.Write("\nPlease provide email address: ");
                     var emailAddress = Console.ReadLine();
                     Console.Write("\n What Type of Account: ");
-                    var typeOfAccount = Console.ReadLine();
+
+                    var typeOfAccounts = Enum.GetNames(typeof(AccountTypes));
+                    for(int i=0;i< typeOfAccounts.Length; i++)
+                    {
+                        Console.WriteLine($"{i}):{typeOfAccounts[i]}");
+                    }
+
+                    var typeOfAccount = Convert.ToInt32(Console.ReadLine());
+                    var accountType = (AccountTypes)Enum.Parse(typeof())
+
                     var account1 = Bank.CreateAccount(emailAddress, AccountTypes.Checking, 0.0M);
                     Console.WriteLine($"AccountNumber: {account1.AccountNumber}, TypeOfAccount: {account1.TypeOfAccount}, Balance: {account1.Balance}");
 
