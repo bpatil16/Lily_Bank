@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace BedrockBank
 {
@@ -25,9 +26,14 @@ namespace BedrockBank
         /// <summary>
         /// Account number
         /// </summary>
-        public int AccountNumber { get; private set; } 
+        [Key]
+        public int AccountNumber { get; private set; }
 
         public DateTime CreatedDate { get; private set; }
+
+        [Required]
+        [StringLength(50)]
+        [EmailAddress]
         public string EmailAddress { get; set; }
 
         public decimal Balance { get; private set; }

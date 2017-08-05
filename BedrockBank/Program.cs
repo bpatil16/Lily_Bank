@@ -37,7 +37,8 @@ namespace BedrockBank
                     }
 
                     var typeOfAccount = Convert.ToInt32(Console.ReadLine());
-                    var accountType = (AccountTypes)Enum.Parse(typeof())
+                    var accountType = (AccountTypes)Enum.Parse(typeof(AccountTypes),
+                        typeOfAccounts[typeOfAccount - 1]);
 
                     var account1 = Bank.CreateAccount(emailAddress, AccountTypes.Checking, 0.0M);
                     Console.WriteLine($"AccountNumber: {account1.AccountNumber}, TypeOfAccount: {account1.TypeOfAccount}, Balance: {account1.Balance}");

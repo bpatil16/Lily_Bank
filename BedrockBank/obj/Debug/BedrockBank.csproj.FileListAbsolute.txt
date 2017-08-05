@@ -9,3 +9,9 @@ C:\Users\sachip\Documents\Github\Lily_Bank\BedrockBank\obj\Debug\BedrockBank.pdb
 C:\Users\sachip\Documents\Github\Lily_Bank\BedrockBank\bin\Debug\BedrockBank.exe
 C:\Users\sachip\Documents\Github\Lily_Bank\BedrockBank\bin\Debug\BedrockBank.pdb
 C:\Users\sachip\Documents\Github\Lily_Bank\BedrockBank\obj\Debug\BedrockBank.csprojResolveAssemblyReference.cache
+C:\Users\localadmin\Documents\Github\BankApp_July\BedrockBank\bin\Debug\BedrockBank.exe.config
+C:\Users\localadmin\Documents\Github\BankApp_July\BedrockBank\bin\Debug\BedrockBank.exe
+C:\Users\localadmin\Documents\Github\BankApp_July\BedrockBank\bin\Debug\BedrockBank.pdb
+C:\Users\localadmin\Documents\Github\BankApp_July\BedrockBank\obj\Debug\BedrockBank.csprojResolveAssemblyReference.cache
+C:\Users\localadmin\Documents\Github\BankApp_July\BedrockBank\obj\Debug\BedrockBank.exe
+C:\Users\localadmin\Documents\Github\BankApp_July\BedrockBank\obj\Debug\BedrockBank.pdb
