@@ -8,7 +8,7 @@ namespace BedrockBank
 {
     public static class Bank
     {
-        private static BankModel db = new Accounts();
+        private static BankModel db = new BankModel();
         
         public static Account CreateAccount(string emailAddress, AccountTypes typeOfAccount, decimal amount = 0.0M)
         {
@@ -21,8 +21,8 @@ namespace BedrockBank
             {
                 account.Deposit(amount);
             }
-            db.Accounts.Add.(account);
-            db.Savechanges();
+            db.Accounts.Add(account);
+            //db.SaveChanges();
             return account;
         }
     }
