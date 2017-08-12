@@ -19,6 +19,7 @@ namespace BedrockBank
                 Console.WriteLine("1. Create an Account");
                 Console.WriteLine("2. Deposit");
                 Console.WriteLine("3. Withdraw");
+                Console.WriteLine("4. Print all accounts");
 
                 var option = Console.ReadLine();
 
@@ -52,12 +53,30 @@ namespace BedrockBank
                         break;
                     case "2":
                         break;
+
+                    case "4":
+                        PrintAllAccounts();
+                        break;
                     default:
+
                         break;
                 }
 
                 Console.ReadLine();
             }
         }
+
+        private static void PrintAllAccounts()
+        {
+
+            Console.WriteLine("Email Address");
+            var emailAddress = Console.ReadLine();
+            var myAccounts = Bank.GetAllAccountsByEmailAddress(emailAddress);
+            foreach(var account in myAccounts)
+            {
+                Console.WriteLine($"An: {account.AccountNumber}, AT: {account.TypeOfAccount}, Bal:{account.Balance}:C");
+            }
+                
+         }
     }
 }
