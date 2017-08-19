@@ -20,6 +20,7 @@ namespace BedrockBank
                 Console.WriteLine("2. Deposit");
                 Console.WriteLine("3. Withdraw");
                 Console.WriteLine("4. Print all accounts");
+                Console.WriteLine("5. Print all Trasactions");
 
                 var option = Console.ReadLine();
 
@@ -52,10 +53,34 @@ namespace BedrockBank
 
                         break;
                     case "2":
+
+                        PrintAllAccounts();
+                        Console.Write("Account number to deposit ?");
+                        var accountNumber = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Amount to Deposit");
+                        amount = Convert.ToDecimal(Console.ReadLine());
+                        Bank.Deposit(accountNumber, amount);
+                        
+                        break;
+
+                    case "3":
+                        PrintAllAccounts();
+                        Console.Write("Account number to withdraw ?");
+                        accountNumber = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Amount to Withdraw");
+                        amount = Convert.ToDecimal(Console.ReadLine());
+                        Bank.Withdraw(accountNumber, amount);
                         break;
 
                     case "4":
+
                         PrintAllAccounts();
+                        break;
+
+                    case "5":
+
+
+
                         break;
                     default:
 

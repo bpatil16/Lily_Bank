@@ -31,5 +31,43 @@ namespace BedrockBank
             {
             return db.Accounts.Where(a => a.EmailAddress == emailAddress).ToArray();
             }
+
+        public static Account GetAccountByAccountNumber(int accountNumber)
+        {
+
+            var account = db.Accounts.Where(a => a.AccountNumber == accountNumber).FirstOrDefault();
+            if (account == null)
+            {
+                throw new ArgumentException("Invalid Account Number");
+            }
+
+            return account;
+        }
+
+        public static void Deposit(int accountNumber, decimal amount)
+        {
+            var account = GetAccountByAccountNumber(accountNumber);
+            account.Deposit(amount);
+            db.Entry(account).CurrentValues.SetValues(account);
+            db.SaveChanges();
+
+            var transaction = new Transaction
+            {
+                TypeofTransaction = TransactionType.Credit,
+                TransactionTime = DateTime.Now,
+                Amount = amount,
+                Description = "Deposit",
+                AccountNumber = accountNumber
+            };
+            db.Transactions.Add(transaction);
+            db.SaveChanges();
+
+        }
+
+
+        }
+        }
+
+
     }
 }
