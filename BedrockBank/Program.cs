@@ -54,22 +54,43 @@ namespace BedrockBank
                         break;
                     case "2":
 
-                        PrintAllAccounts();
-                        Console.Write("Account number to deposit ?");
-                        var accountNumber = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Amount to Deposit");
-                        amount = Convert.ToDecimal(Console.ReadLine());
-                        Bank.Deposit(accountNumber, amount);
-                        
+                        try
+                        {
+                            PrintAllAccounts();
+                            Console.Write("Account number to do deposit? ");
+                            var accountNumber = Convert.ToInt32(Console.ReadLine());
+                            Console.Write("Amount to deposit: ");
+                            amount = Convert.ToDecimal(Console.ReadLine());
+
+                            Bank.Deposit(accountNumber, amount);
+                            Console.WriteLine("Deposit completed successfully");
+                        }
+                        catch (ArgumentNullException ax)
+                        {
+                            Console.WriteLine($"Something went wrong. {ax.Message} ");
+                        }
+                        catch (FormatException)
+                        {
+                            Console.WriteLine($"Something went wrong. Either account number or amount is invalid.");
+                        }
                         break;
 
                     case "3":
-                        PrintAllAccounts();
-                        Console.Write("Account number to withdraw ?");
-                        accountNumber = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine("Amount to Withdraw");
-                        amount = Convert.ToDecimal(Console.ReadLine());
-                        Bank.Withdraw(accountNumber, amount);
+                        try
+                        {
+                            PrintAllAccounts();
+                            Console.Write("Account number to do withdraw? ");
+                            var accountNumber = Convert.ToInt32(Console.ReadLine());
+                            Console.Write("Amount to withdraw: ");
+                            amount = Convert.ToDecimal(Console.ReadLine());
+
+                            Bank.Withdraw(accountNumber, amount);
+                            Console.WriteLine("Withdraw completed successfully");
+                        }
+                        catch (ArgumentNullException ax)
+                        {
+                            Console.WriteLine($"Something went wrong. {ax.Message} ");
+                        }
                         break;
 
                     case "4":
@@ -78,11 +99,26 @@ namespace BedrockBank
                         break;
 
                     case "5":
+                        try
+                        {
+                            PrintAllAccounts();
+                            Console.Write("Account number to view transactions? ");
+                            var accountNumber = Convert.ToInt32(Console.ReadLine());
 
-
+                            var transactions = Bank.GetTransactionsByAccountNumber(accountNumber);
+                            foreach (var transaction in transactions)
+                            {
+                                Console.WriteLine($"TN: {transaction.Id}, Description: {transaction.Description}, Type: {transaction.TypeofTransaction}, Date: {transaction.TransactionTime}, Amount: {transaction.Amount}");
+                            }
+                        }
+                        catch (ArgumentNullException ax)
+                        {
+                            Console.WriteLine($"Something went wrong. {ax.Message} ");
+                        }
 
                         break;
-                    default:
+
+                     default:
 
                         break;
                 }
@@ -94,14 +130,20 @@ namespace BedrockBank
         private static void PrintAllAccounts()
         {
 
-            Console.WriteLine("Email Address");
+            Console.Write("Email address: ");
             var emailAddress = Console.ReadLine();
-            var myAccounts = Bank.GetAllAccountsByEmailAddress(emailAddress);
-            foreach(var account in myAccounts)
+            if (string.IsNullOrEmpty(emailAddress))
             {
-                Console.WriteLine($"An: {account.AccountNumber}, AT: {account.TypeOfAccount}, Bal:{account.Balance}:C");
+                throw new ArgumentNullException("Invalid email address.");
             }
-                
-         }
+            var myAccounts =
+                Bank.GetAllAccountsByEmailAddress(emailAddress);
+
+            foreach (var account in myAccounts)
+            {
+                Console.WriteLine($"AN: {account.AccountNumber}, AT: {account.TypeOfAccount}, Balance: {account.Balance:C}, CreatedDate: {account.CreatedDate}");
+            }
+
+        }
     }
 }

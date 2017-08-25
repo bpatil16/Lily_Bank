@@ -22,7 +22,7 @@ namespace BedrockBank
                 account.Deposit(amount);
             }
             db.Accounts.Add(account);
-            //db.SaveChanges();
+            db.SaveChanges();
             return account;
 
         }
@@ -64,10 +64,37 @@ namespace BedrockBank
 
         }
 
+        public static void Withdraw(int accountNumber, decimal amount)
+        {
+            var account = GetAccountByAccountNumber(accountNumber);
+            account.Withdraw(amount);
+            db.Entry(account).CurrentValues.SetValues(account);
+            db.SaveChanges();
 
+            var transaction = new Transaction
+            {
+                TypeofTransaction = TransactionType.Debit,
+                TransactionTime = DateTime.Now,
+                Amount = amount,
+                Description = "Withdraw",
+                AccountNumber = accountNumber
+            };
+
+            db.Transactions.Add(transaction);
+            db.SaveChanges();
         }
+
+
+        public static Transaction[] GetTransactionsByAccountNumber(int accountNumber)
+        {
+            return db.Transactions
+                .Where(t => t.AccountNumber == accountNumber)
+                .OrderByDescending(t => t.TransactionTime)
+                .ToArray();
         }
-
-
     }
 }
+
+
+    
+
