@@ -9,13 +9,13 @@ C:\Users\sachip\Documents\Github\Lily_Bank\BedrockBank\obj\Debug\BedrockBank.pdb
 C:\Users\sachip\Documents\Github\Lily_Bank\BedrockBank\bin\Debug\BedrockBank.exe
 C:\Users\sachip\Documents\Github\Lily_Bank\BedrockBank\bin\Debug\BedrockBank.pdb
 C:\Users\sachip\Documents\Github\Lily_Bank\BedrockBank\obj\Debug\BedrockBank.csprojResolveAssemblyReference.cache
-C:\Users\localadmin\Documents\Github\BankApp_July\BedrockBank\bin\Debug\BedrockBank.exe.config
-C:\Users\localadmin\Documents\Github\BankApp_July\BedrockBank\bin\Debug\BedrockBank.exe
 C:\Users\localadmin\Documents\Github\BankApp_July\BedrockBank\bin\Debug\BedrockBank.pdb
 C:\Users\localadmin\Documents\Github\BankApp_July\BedrockBank\obj\Debug\BedrockBank.csprojResolveAssemblyReference.cache
-C:\Users\localadmin\Documents\Github\BankApp_July\BedrockBank\obj\Debug\BedrockBank.exe
 C:\Users\localadmin\Documents\Github\BankApp_July\BedrockBank\obj\Debug\BedrockBank.pdb
 C:\Users\localadmin\Documents\Github\BankApp_July\BedrockBank\bin\Debug\EntityFramework.dll
 C:\Users\localadmin\Documents\Github\BankApp_July\BedrockBank\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\localadmin\Documents\Github\BankApp_July\BedrockBank\bin\Debug\EntityFramework.xml
 C:\Users\localadmin\Documents\Github\BankApp_July\BedrockBank\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\localadmin\Documents\Github\BankApp_July\BedrockBank\bin\Debug\BedrockBank.dll.config
+C:\Users\localadmin\Documents\Github\BankApp_July\BedrockBank\bin\Debug\BedrockBank.dll
+C:\Users\localadmin\Documents\Github\BankApp_July\BedrockBank\obj\Debug\BedrockBank.dll

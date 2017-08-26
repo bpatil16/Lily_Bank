@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.15
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BedrockBank", "BedrockBank\BedrockBank.csproj", "{AC635E0D-B790-44E9-A6A0-CBEBC1C58FA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankUI", "BankUI\BankUI.csproj", "{77D3610F-3D24-4039-A864-42BCF7EDF20E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankUI.Tests", "BankUI.Tests\BankUI.Tests.csproj", "{EB8D482B-E832-4E45-BC1D-8CD41C730121}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{AC635E0D-B790-44E9-A6A0-CBEBC1C58FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC635E0D-B790-44E9-A6A0-CBEBC1C58FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AC635E0D-B790-44E9-A6A0-CBEBC1C58FA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77D3610F-3D24-4039-A864-42BCF7EDF20E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77D3610F-3D24-4039-A864-42BCF7EDF20E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77D3610F-3D24-4039-A864-42BCF7EDF20E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77D3610F-3D24-4039-A864-42BCF7EDF20E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB8D482B-E832-4E45-BC1D-8CD41C730121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB8D482B-E832-4E45-BC1D-8CD41C730121}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB8D482B-E832-4E45-BC1D-8CD41C730121}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB8D482B-E832-4E45-BC1D-8CD41C730121}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
